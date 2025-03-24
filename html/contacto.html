@@ -45,49 +45,44 @@
             <p><strong>Dirección:</strong> Av 123, Tacna, Perú</p>
 
             <h3>Formulario de Contacto</h3>
-            <form id="formularioContacto" action="../procesar_contacto.php" method="POST" style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px;">
+            <form id="formularioContacto" action="procesar_contacto.php" method="POST">
                 <div>
                     <label for="nombre">Nombre:</label><br>
-                    <input type="text" id="nombre" name="nombre" placeholder="Tu nombre" required>
+                    <input type="text" id="nombre" name="nombre" required>
                 </div>
                 <div>
                     <label for="apellidoPaterno">Apellido Paterno:</label><br>
-                    <input type="text" id="apellidoPaterno" name="apellidoPaterno" placeholder="Tu apellido paterno"
-                        required>
+                    <input type="text" id="apellidoPaterno" name="apellidoPaterno" required>
                 </div>
                 <div>
                     <label for="apellidoMaterno">Apellido Materno:</label><br>
-                    <input type="text" id="apellidoMaterno" name="apellidoMaterno" placeholder="Tu apellido materno"
-                        required>
+                    <input type="text" id="apellidoMaterno" name="apellidoMaterno" required>
                 </div>
                 <div>
                     <label for="correoElectronico">Correo Electrónico:</label><br>
-                    <input type="email" id="correoElectronico" name="correoElectronico"
-                        placeholder="Tu correo electrónico" required>
+                    <input type="email" id="correoElectronico" name="correoElectronico" required>
                 </div>
                 <div>
                     <label for="telefono">Teléfono:</label><br>
-                    <input type="tel" id="telefono" name="telefono" placeholder="Tu número de teléfono" required>
+                    <input type="tel" id="telefono" name="telefono" required>
                 </div>
                 <div>
                     <label for="ubicacion">Ubicación:</label><br>
-                    <input type="text" id="ubicacion" name="ubicacion"
-                        placeholder="Ciudad o país desde donde nos contactas" required>
+                    <input type="text" id="ubicacion" name="ubicacion" required>
                 </div>
                 <div>
                     <label for="empresa">Empresa:</label><br>
-                    <input type="text" id="empresa" name="empresa" placeholder="Nombre de tu empresa (opcional)">
+                    <input type="text" id="empresa" name="empresa">
                 </div>
                 <div>
                     <label for="puesto">Puesto:</label><br>
-                    <input type="text" id="puesto" name="puesto" placeholder="Tu puesto en la empresa (opcional)">
+                    <input type="text" id="puesto" name="puesto">
                 </div>
-                <div style="grid-column: span 2;">
+                <div>
                     <label for="mensaje">Mensaje:</label><br>
-                    <textarea id="mensaje" name="mensaje" rows="5" placeholder="Escribe tu mensaje aquí" required
-                        style="width: 100%;"></textarea>
+                    <textarea id="mensaje" name="mensaje" rows="5" required></textarea>
                 </div>
-                <div style="grid-column: span 2; text-align: center;">
+                <div>
                     <button type="submit">Enviar</button>
                 </div>
             </form>
