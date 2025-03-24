@@ -1,0 +1,167 @@
+/* Reset de márgenes y paddings */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Estilos generales */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #fff;
+    color: #000;
+}
+
+/* Contenedor principal */
+.container {
+    width: 90%;
+    margin: auto;
+}
+
+/* Estilos del encabezado */
+header {
+    background-color: #FFA500;
+    padding: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.header_logo {
+    display: flex;
+    align-items: center;
+}
+
+.header_logo img {
+    width: 50px;
+    height: 50px;
+    margin-right: 10px;
+}
+
+h1 {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+/* Menú de navegación */
+nav {
+    background-color: #FFA500;
+    padding: 10px;
+    text-align: center;
+}
+
+nav ul {
+    list-style: none;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 10px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+    padding: 8px 15px;
+    border-radius: 5px;
+}
+
+nav ul li a:hover {
+    background-color: #FFD700;
+}
+
+/* Sección principal */
+section {
+    background-color: #FFB347;
+    padding: 20px;
+    margin-top: 10px;
+    border-radius: 10px;
+}
+
+section img {
+    display: block;
+    width: 100%;
+    margin: 10px 0;
+    border-radius: 10px;
+}
+
+p {
+    text-align: justify;
+    margin-bottom: 15px;
+    line-height: 1.6;
+}
+
+/* Barra lateral (aside) */
+aside {
+    background-color: #FFA500;
+    padding: 15px;
+    margin-top: 10px;
+    border-radius: 10px;
+    float: right;
+    width: 30%;
+}
+
+aside img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+/* Pie de página */
+footer {
+    text-align: center;
+    padding: 15px;
+    background-color: #FFA500;
+    margin-top: 20px;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+footer p {
+    margin: 5px 0;
+}
+
+footer a {
+    text-decoration: none;
+    font-weight: bold;
+    color: black;
+    margin: 0 10px;
+}
+
+footer a:hover {
+    color: #FFD700;
+}
+
+/* Responsividad para imágenes en la sección principal */
+section img {
+    width: 50%;
+    height: 50%;
+    display: block;
+    margin: 0 auto;
+}
+
+/* Media queries para pantallas pequeñas */
+@media (max-width: 768px) {
+    .container {
+        width: 100%;
+        padding: 0 10px;
+    }
+
+    nav ul li {
+        display: block;
+        margin: 5px 0;
+    }
+
+    aside {
+        float: none;
+        width: 100%;
+        margin-top: 20px;
+    }
+
+    section {
+        padding: 15px;
+    }
+}
