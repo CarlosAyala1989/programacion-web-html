@@ -31,12 +31,19 @@ $stmt = $conn->prepare($sql);
 $stmt->bind_param("sssssssss", $nombre, $apellido_paterno, $apellido_materno, $correo_electronico, $telefono, $ubicacion, $empresa, $puesto, $mensaje);
 
 if ($stmt->execute()) {
-    echo "Mensaje enviado correctamente.";
+    echo "<script>
+            alert('Mensaje enviado satisfactoriamente.');
+            window.location.href = '../html/contacto.html';
+          </script>";
 } else {
-    echo "Error al enviar el mensaje: " . $conn->error;
+    echo "<script>
+            alert('Error al enviar el mensaje. Inténtalo de nuevo.');
+            window.location.href = '../html/contacto.html';
+          </script>";
 }
 
 // Cerrar conexión
 $stmt->close();
 $conn->close();
 ?>
+
