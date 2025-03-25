@@ -15,10 +15,10 @@ if ($conn->connect_error) {
 }
 
 // Obtener los datos del formulario
-$usuario = $_POST['usuario'];
-$contrasena = $_POST['contrasena'];
+$usuario = trim($_POST['usuario']);
+$contrasena = trim($_POST['contrasena']);
 
-// Consulta SQL para verificar el usuario
+// Consulta SQL corregida
 $sql = "SELECT id, contrasena FROM logins_administradores WHERE usuario = ?";
 $stmt = $conn->prepare($sql);
 $stmt->bind_param("s", $usuario);
@@ -28,8 +28,8 @@ $resultado = $stmt->get_result();
 if ($resultado->num_rows > 0) {
     $fila = $resultado->fetch_assoc();
     
-    // Verificar si la contraseña es correcta
-    if (password_verify($contrasena, $fila['contrasena'])) {
+    // Verificar si la contraseña es correcta (sin encriptar)
+    if ($contrasena === $fila['contrasena']) {
         // Almacenar sesión y redirigir
         $_SESSION['admin_id'] = $fila['id'];
         $_SESSION['usuario'] = $usuario;
